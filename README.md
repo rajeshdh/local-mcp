@@ -22,6 +22,37 @@ npm run dev
 
 Server runs at [http://localhost:8080](http://localhost:8080) by default.
 
+## Adding to Cursor as MCP Tool
+
+To use this server as a local MCP tool in [Cursor](https://www.cursor.so/):
+
+1. **Start the server:**
+   ```bash
+   npm run dev
+   ```
+
+2. **Configure Cursor MCP:**
+   - Open Cursor
+   - Go to `Settings` > `Tools & Integrations` > `MCP`
+   - Add a new MCP server configuration:
+     ```json
+     {
+       "name": "local-mcp-server",
+       "command": "node",
+       "args": ["dist/server.js"],
+       "env": {}
+     }
+     ```
+
+3. **Build for production (optional):**
+   ```bash
+   npm run build
+   ```
+
+4. **Restart Cursor** to load the new MCP server.
+
+Now Cursor can invoke your local tools through the MCP protocol!
+
 ## Example Usage
 
 ### Greeter Tool
