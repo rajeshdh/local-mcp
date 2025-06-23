@@ -1,4 +1,4 @@
-# MCP-lite Server
+# Building a Local MCP Server and Using It with Cursor
 
 A lightweight, local Model Context Protocol (MCP)-style server built with TypeScript, Express, and Zod.
 
